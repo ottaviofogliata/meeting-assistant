@@ -234,7 +234,7 @@ Finalize incrementally and avoid an entire-meeting video buffer in RAM. Video is
 
 ### 9.1 Organization
 
-The user selects a local archive root. Each meeting has a stable ID and its own folder, discoverable in the main window and Finder. The application indexes these folders; a rebuildable index must not become the sole copy of meeting content.
+The default archive root is **`~/Meetings`**, directly inside the user's home directory, outside iCloud Drive and the potentially iCloud-synchronized Documents folder. The user may explicitly select a different local archive root. Existing archives are not moved automatically. Each meeting has a stable ID and its own folder, discoverable in the main window and Finder. The application indexes these folders; a rebuildable index must not become the sole copy of meeting content.
 
 An illustrative layout is:
 
