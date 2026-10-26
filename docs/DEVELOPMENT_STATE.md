@@ -7,9 +7,9 @@ Date: 26 October 2026. Do not continue development until the user asks to resume
 The user requested committing/pushing the English specifications, then implementing the entire native macOS Meeting Assistant end-to-end. The current task was explicitly paused for a few hours; it was not completed or cancelled.
 
 - Workspace: `/Users/8/Sites/meeting-assistant`.
-- Branch: `main`; origin: `git@github.com:ottaviofogliata/meeting-assistant.git`.
+- Branch: `codex/meeting-assistant-checkpoint`; origin: `git@github.com:ottaviofogliata/meeting-assistant.git`.
 - Specifications committed and pushed: `2577e7a` initially, then `0ca25dc` for the default `~/Meetings` archive. The latter push was confirmed successful.
-- This development checkpoint saves the application sources locally in Git. Application implementation changes have not yet been pushed.
+- Application checkpoint `8493fde` is published on `codex/meeting-assistant-checkpoint` at the user's request. Remote `main` remains at the specification commit `0ca25dc`. Development remains paused.
 - Product decisions remain in `specs/specs.md`. Do not reopen model comparisons: compressed multilingual Whisper large-v3-turbo `large-v3-v20240930_626MB` is explicitly chosen by the user.
 
 ## Product constraints to preserve
@@ -59,7 +59,7 @@ The same real test recording, reprocessed locally with the correction, now yield
 4. Run the synthetic bilingual fixture with `--realtime-windows` to exercise the eight-second inference windows. This QA flag was compiled immediately before pausing but has not been run yet. A normal 24-second fixture can verify regressions after signal conversion changes. No other ASR model comparisons are wanted.
 5. Verify the app's background→realtime→background transition with actual speech, including Pause/Resume, and confirm no loss/duplication. The selected mode is correctly saved as realtime in the reported test; the signal path was the confirmed failure.
 6. Finish practical recovery/quit checks as appropriate. Do not claim a certified five-second worst-case audio crash-loss bound or target-hardware results without measurement.
-7. Update validation/issue status, commit final fixes, push the implementation when ready, package the signed app and leave it idle. Specs have already been pushed.
+7. Update validation/issue status, commit and push final fixes on the checkpoint branch when ready, package the signed app and leave it idle. Keep the implementation on this branch; `main` contains the specifications.
 
 ## Test safety, user preferences and cleanup
 
